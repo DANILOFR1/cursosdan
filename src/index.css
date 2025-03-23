@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-bio-light to-white text-bio-primary font-sans;
+    min-height: 100vh;
+  }
+}
+
+.link-card {
+  @apply overflow-hidden relative transition-all duration-300 ease-in-out;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+}
+
+.link-card::before {
+  content: '';
+  @apply absolute inset-0 bg-white bg-opacity-20 z-[-1] opacity-0 transition-opacity duration-300;
+}
+
+.link-card:hover::before {
+  @apply opacity-100;
+}
+
+.link-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.bio-animation-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.bio-animation-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.bio-animation-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.bio-animation-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.bio-animation-delay-5 {
+  animation-delay: 0.5s;
+}
+
+.bio-animation-delay-6 {
+  animation-delay: 0.6s;
+}
