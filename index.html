@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biólogo Rangel - Links</title>
+    <!-- Meta tags para evitar cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Versão dinâmica para forçar carregamento (atualize esta data quando modificar o site) -->
+    <meta name="version" content="v1.1-20240323">
+    <script>
+        // Script para forçar recarregamento quando houver nova versão
+        (function() {
+            // Verificar se a página foi recarregada recentemente
+            if (localStorage.getItem('lastReload') === null || 
+                (Date.now() - localStorage.getItem('lastReload')) > 86400000) { // 24 horas
+                localStorage.setItem('lastReload', Date.now());
+                // Forçar recarregamento ignorando cache
+                window.location.reload(true);
+            }
+        })();
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
         
@@ -59,6 +77,24 @@
             text-align: center;
             font-size: 14px;
             max-width: 300px;
+            margin-bottom: 16px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            color: #4F46E5;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
         }
         
         .links {
@@ -103,37 +139,45 @@
 <body>
     <div class="container">
         <div class="profile">
-            <img src="profile.jpg" alt="Biólogo Rangel" class="profile-image">
+            <img src="profile.jpg?v=1.1-20240323" alt="Biólogo Rangel" class="profile-image">
             <h1 class="profile-name">Biólogo Rangel</h1>
             <p class="profile-username">@biologorangel</p>
-            <p class="profile-bio">Biólogo | Especialista em Biodiversidade | Ampliando o seu conhecimento sobre fauna</p>
+            <p class="profile-bio">Biólogo | Especialista em Biodiversidade | Ampliando o seu conhecimento agora</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/danilorangelbio/" target="_blank" title="LinkedIn">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/biologorangel/" target="_blank" title="Instagram">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
         </div>
         
         <div class="links">
-            <a href="https://exemplo.com/curso-biologia-celular" class="link-card">
-                <span>Curso Básico de Biologia Celular</span>
-                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"></path><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
+            <a href="https://symp.la/butjgs" class="link-card">
+                <span>Curso de formação em Auxiliar de Campo</span>
+                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
             </a>
-            
-            <a href="https://exemplo.com/prep-enem-biologia" class="link-card">
-                <span>Preparatório para o ENEM - Biologia</span>
+
+            <a href="https://symp.la/tpchha" class="link-card">
+                <span>Curso - Aves marinhas: Tópicos em conservação</span>
                 <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
             </a>
             
-            <a href="https://exemplo.com/biologia-concursos" class="link-card">
-                <span>Biologia para Concursos</span>
-                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <a href="https://symp.la/swpqml" class="link-card">
+                <span>O 1º passo para praticar Observação de Aves</span>
+                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
             </a>
-            
-            <a href="https://youtube.com/@biologorangel" class="link-card">
-                <span>Canal do YouTube</span>
-                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19c-2.3 0-6.4-.2-8.1-.6-.7-.2-1.2-.7-1.4-1.4-.3-1.1-.5-3.4-.5-5s.2-3.9.5-5c.2-.7.7-1.2 1.4-1.4C5.6 5.2 9.7 5 12 5s6.4.2 8.1.6c.7.2 1.2.7 1.4 1.4.3 1.1.5 3.4.5 5s-.2 3.9-.5 5c-.2.7-.7 1.2-1.4 1.4-1.7.4-5.8.6-8.1.6 0 0 0 0 0 0z"></path><polygon points="10 15 15 12 10 9"></polygon></svg>
-            </a>
-            
-            <a href="https://exemplo.com/material-complementar" class="link-card">
-                <span>Material Complementar</span>
-                <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-            </a>
+
         </div>
         
         <footer>
